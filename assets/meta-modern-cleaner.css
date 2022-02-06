@@ -1,0 +1,87 @@
+.meta-modern-cleaner-container-row {
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.meta-modern-cleaner-container-row label {
+    font-weight: bold;
+}
+
+.meta-modern-cleaner-container-row select {
+    margin: 20px 0;
+}
+
+.meta-modern-cleaner-container-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.meta-modern-cleaner-container-column select {
+    min-width: 300px;
+    max-width: 400px;
+    min-height: 300px;
+}
+
+.meta-modern-cleaner-container-column.confirmation {
+    display: flex;
+    justify-content: center;
+    border: 4px dashed firebrick;
+    border-radius: 10px;
+    padding: 20px;
+    background: antiquewhite;
+    min-width: 420px;
+}
+
+.meta-modern-cleaner-container-column.confirmation p {
+    font-size: 1.3em;
+    max-width: 480px;
+}
+
+.conf_buttons {
+    text-align: center;
+}
+
+.conf_buttons input[type='button'] {
+    border: 1px solid black;
+    border-radius: 3px;
+    min-width: 60px;
+    cursor: pointer;
+}
+
+#yes_confirm {
+    background: crimson;
+}
+
+#no_return {
+    background: forestgreen;
+}
+
+.results {
+    overflow: hidden;
+}
+
+.show_link {
+    position: relative;
+    z-index: 9999;
+}
+
+#hidden_content {
+    max-width: 600px;
+}
+
+#hidden_content:not(:target) {
+    height: 9em;
+}
+
+#hidden_content:target {
+    height: auto;
+}
+
+.meta-modern-cleaner-container-column.confirmation small {
+    font-size: small;
+    opacity: .7;
+    display: block;
+    line-height: 1.3em;
+}
