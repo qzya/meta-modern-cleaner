@@ -67,13 +67,13 @@ function before_cleaning_callback() {
     if (!empty($_POST['selected_metas'])) : 
         $selected_metas = $_POST['selected_metas'];
         ?>
-        <p>You are going to remove the following elements from <strong><?php echo implode(', ', $selected_post_types); ?></strong> post type(s):</p>
+        <p>You are going to remove the following elements from the <strong><?php echo implode(', ', $selected_post_types); ?></strong> post type(s):</p>
         <ol>
         <?php foreach ($selected_metas as $selected_meta ): ?>
             <li><?php echo  "{$selected_meta} (<a href='https://github.com/search?q={$selected_meta}&type=code' target='_blank'>search on github</a>)" ?></li>
         <?php endforeach; ?>
         </ol>
-        <p>After clicking on the "YES" button, the items will be <strong>permanently deleted</strong>. Click "NO" to cancel.</p>
+        <p>After clicking the "YES" button, the items will be <strong>permanently deleted</strong>. Click "NO" to cancel.</p>
         <div class="conf_buttons">
             <input type="button" value="YES" id="yes_confirm">
             <input type="button" value="NO" id="no_return">
@@ -113,7 +113,7 @@ function meta_delete_confirmed_callback() {
                 array_push($work_output, "{$i}. DELETED '{$selected_meta}' from {$post->post_type} '{$post->post_title}'");
             } else {
                 $i_pass++;
-                // array_push($work_output, "PASSED '{$selected_meta}' from {$post->post_type} '{$post->post_title}'");
+                // array_push($work_output, "SKIPPED '{$selected_meta}' from {$post->post_type} '{$post->post_title}'");
             }
         }
     }
@@ -123,7 +123,7 @@ function meta_delete_confirmed_callback() {
     
     echo '<p>The operation took <strong>' . round($time, 4) . '</strong> sec.</p>';
 
-    echo "<p><strong>{$i}</strong> meta fields successfully deleted and <strong>{$i_pass}</strong> passed.<br> <small>Passing items is normal, since going through all the posts with a check for the existence of a meta is much faster than forming a meta query and filtering posts by meta fields :) </small> </p>";
+    echo "<p><strong>{$i}</strong> meta fields are successfully deleted and <strong>{$i_pass}</strong> skipped.<br> <small> It`s normal that items are skipped, since it`s much faster to go through all the posts with a meta existence check, than to create a meta query and to filter posts by meta fields :) </small> </p>";
     ?>
     <div class="results">
         <a href="#hidden_content" class="show_link">Show all &#129047; </a>

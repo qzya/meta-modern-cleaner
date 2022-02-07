@@ -6,16 +6,16 @@
 * License: GPLv2 or later
 * License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Simple plugin for clean meta data in posts (and CPTs)
+Simple plugin to clean meta data in Wordpress posts (and CPTs)
 
-The plugin is aimed primarily at developers and experienced users who understand what they are doing.
-The plugin works in the Wordpress admin panel and allows you to select and bulk remove meta fields in standard Wordpress posts as well as in custom post types through a simple and intuitive interface.
+The plugin is intended primarily for developers and experienced users who understand what they are doing.
+The plugin works in the Wordpress admin panel and allows you to select and perform bulk remove of meta fields in standard Wordpress posts as well as in custom post types through a simple and intuitive interface.
 
-**Before any manipulations with the plugin, be sure to backup your database!**
+**Before any manipulations with the plugin, make sure to backup your database!**
 
 ## Installation
 
-1. Upload `meta-modern-cleaner` directory to the `/wp-content/plugins/` directory
+1. `git clone git@github.com:qzya/meta-modern-cleaner.git` in the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
 ## FAQ
@@ -23,8 +23,8 @@ The plugin works in the Wordpress admin panel and allows you to select and bulk 
 ### Is it safe?
 
 NO! This plugin is in early beta and can permanently remove some records from your database. Do not use the plugin on prod and make sure to back up the database before any manipulations with the plugin. 
-Use at your own risk.
+Use it at your own risk.
 
-### I don't know if it's safe to delete this meta field?
+### How do I know if it's safe to delete this given meta field?
 
-If you're not sure, it's best not to delete it. If you think a field has added by plugin you don't use anymore, try clicking on the `search on github` link next to the field name. A github code search will in most cases reveal which plugin is using that field name.
+If you're not sure, you better not delete it. If you think a field was added by a plugin that is not used anymore or even deleted, try clicking the `search on github` link next to the field name. In most cases, a github code search will show, which plugin is using that field name.
