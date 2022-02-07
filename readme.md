@@ -8,6 +8,8 @@
 
 Simple plugin to clean meta data in Wordpress posts (and CPTs)
 
+![Meta modern cleaner UI](/screenshot-1.png)
+
 The plugin is intended primarily for developers and experienced users who understand what they are doing.
 The plugin works in the Wordpress admin panel and allows you to select and perform bulk remove of meta fields in standard Wordpress posts as well as in custom post types through a simple and intuitive interface.
 
@@ -28,3 +30,5 @@ Use it at your own risk.
 ### How do I know if it's safe to delete this given meta field?
 
 If you're not sure, you better not delete it. If you think a field was added by a plugin that is not used anymore or even deleted, try clicking the `search on github` link next to the field name. In most cases, a github code search will show, which plugin is using that field name.
+
+![Meta modern cleaner guthub search](/screenshot-2.png)
